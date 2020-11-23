@@ -18,6 +18,8 @@ namespace n2b2
         public List<AviaoGuerra> ListaAviaoG;
         public List<Navio> ListaNavio;
         public List<NavioGuerra> ListaNavioG;
+        public List<Marca> ListaMarca;
+        public List<Modelo> ListaModelo;
 
         public static void SalvarMarca(Marca m)
         {
@@ -40,6 +42,18 @@ namespace n2b2
             try
             {
                 File.AppendAllText("carros.txt",carro.Identificacao + "|" + carro.QtdePortas.ToString() +"|" + carro.CodigoM + "|" + carro.DescricaoM + "|" + carro.Capacidade.ToString());
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool salvarMoto(Moto moto)
+        {
+            try
+            {
+                File.AppendAllText("moto.txt", moto.Identificacao + "|" + moto.CodigoM + "|" + moto.DescricaoM + "|" + moto.Capacidade.ToString());
                 return true;
             }
             catch
@@ -89,14 +103,161 @@ namespace n2b2
                         c.DescricaoM = temp[j];
                         j++;
                         c.Capacidade = Convert.ToInt32(temp[j]);
-                        
                         j++;
+                        ListaCarros.Add(c);
                     }
                     break;
                 case "Moto":
+                    string[] tempm = File.ReadAllText("moto.txt").Split('|');
+                    for (int j = 0; j < tempm.Length;)
+                    {
+                        Moto c = new Moto();
+                        c.Identificacao = tempm[j];
+                        j++;
+                        c.CodigoM = Convert.ToInt32(tempm[j]);
+                        j++;
+                        c.DescricaoM = tempm[j];
+                        j++;
+                        c.Capacidade = Convert.ToInt32(tempm[j]);
+                        j++;
+                        ListaMotos.Add(c);
+                    }
                     break;
                 case "Caminhao":
+                    string[] tempc = File.ReadAllText("caminhao.txt").Split('|');
+                    for (int j = 0; j < tempc.Length;)
+                    {
+                        Camminhao c = new Camminhao();
+                        c.Identificacao = tempc[j];
+                        j++;
+                        c.CodigoM = Convert.ToInt32(tempc[j]);
+                        j++;
+                        c.DescricaoM = tempc[j];
+                        j++;
+                        c.Capacidade = Convert.ToInt32(tempc[j]);
+                        j++;
+                        ListaCaminhoes.Add(c);
+                    }
                     break;
+                case "Onibus":
+                    string[] tempo = File.ReadAllText("onibus.txt").Split('|');
+                    for (int j = 0; j < tempo.Length;)
+                    {
+                        Onibus c = new Onibus();
+                        c.Identificacao = tempo[j];
+                        j++;
+                        c.CodigoM = Convert.ToInt32(tempo[j]);
+                        j++;
+                        c.DescricaoM = tempo[j];
+                        j++;
+                        c.Capacidade = Convert.ToInt32(tempo[j]);
+                        j++;
+                        ListaOnibus.Add(c);
+                    }
+                    break;
+                case "Navio":
+                    string[] tempn = File.ReadAllText("navio.txt").Split('|');
+                    for (int j = 0; j < tempn.Length;)
+                    {
+                        Navio c = new Navio();
+                        c.Identificacao = tempn[j];
+                        j++;
+                        c.CodigoM = Convert.ToInt32(tempn[j]);
+                        j++;
+                        c.DescricaoM = tempn[j];
+                        j++;
+                        c.Capacidade = Convert.ToInt32(tempn[j]);
+                        j++;
+                        ListaNavio.Add(c);
+                    }
+                    break;
+                case "NavioGuerra":
+                    string[] tempng = File.ReadAllText("navioguerra.txt").Split('|');
+                    for (int j = 0; j < tempng.Length;)
+                    {
+                        NavioGuerra c = new NavioGuerra();
+                        c.Identificacao = tempng[j];
+                        j++;
+                        c.CodigoM = Convert.ToInt32(tempng[j]);
+                        j++;
+                        c.DescricaoM = tempng[j];
+                        j++;
+                        c.Capacidade = Convert.ToInt32(tempng[j]);
+                        j++;
+                        ListaNavioG.Add(c);
+                    }
+                    break;
+                case"Trem":
+                    string[] tempt = File.ReadAllText("trem.txt").Split('|');
+                    for (int j = 0; j < tempt.Length;)
+                    {
+                        Trem c = new Trem();
+                        c.Identificacao = tempt[j];
+                        j++;
+                        c.CodigoM = Convert.ToInt32(tempt[j]);
+                        j++;
+                        c.DescricaoM = tempt[j];
+                        j++;
+                        c.Capacidade = Convert.ToInt32(tempt[j]);
+                        j++;
+                        ListaTrem.Add(c);
+                    }
+                    break;
+                case "Aviao":
+                    string[] tempa = File.ReadAllText("aviao.txt").Split('|');
+                    for (int j = 0; j < tempa.Length;)
+                    {
+                        Aviao c = new Aviao();
+                        c.Identificacao = tempa[j];
+                        j++;
+                        c.CodigoM = Convert.ToInt32(tempa[j]);
+                        j++;
+                        c.DescricaoM = tempa[j];
+                        j++;
+                        c.Capacidade = Convert.ToInt32(tempa[j]);
+                        j++;
+                        ListaAviao.Add(c);
+                    }
+                    break;
+                case "AviaoGuerra":
+                    string[] tempag = File.ReadAllText("aviaoguerra.txt").Split('|');
+                    for (int j = 0; j < tempag.Length;)
+                    {
+                        AviaoGuerra c = new AviaoGuerra();
+                        c.Identificacao = tempag[j];
+                        j++;
+                        c.CodigoM = Convert.ToInt32(tempag[j]);
+                        j++;
+                        c.DescricaoM = tempag[j];
+                        j++;
+                        c.Capacidade = Convert.ToInt32(tempag[j]);
+                        j++;
+                        ListaAviaoG.Add(c);
+                    }
+                    break;
+            }
+            string[] tempmarca = File.ReadAllText("marca.txt").Split('|');
+            for (int j = 0; j < tempmarca.Length;)
+            {
+                Marca c = new Marca();
+                c.Codigo = Convert.ToInt32(tempmarca[j]);
+                j++;
+                c.Descricao = tempmarca[j];
+                j++;
+                ListaMarca.Add(c);
+            }
+
+            string[] tempmod = File.ReadAllText("modelo.txt").Split('|');
+            for (int j = 0; j < tempmod.Length;)
+            {
+                Modelo c = new Modelo();
+                c.CodigoM = Convert.ToInt32(tempmod[j]);
+                j++;
+                c.DescricaoM = tempmod[j];
+                j++;
+                c.Codigo = Convert.ToInt32(tempmod[j]);
+                j++;
+                ListaMarca.Add(c);
             }
         }
     }
