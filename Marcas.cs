@@ -10,14 +10,18 @@ using System.Windows.Forms;
 
 namespace n2b2
 {
-    public partial class Form1 : Form
+    public partial class Marcas : Form
     {
-        public Form1()
+        public Marcas()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Marcas_Load(object sender, EventArgs e)
         {
         }
     }

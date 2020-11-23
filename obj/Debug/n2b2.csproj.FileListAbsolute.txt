@@ -1,0 +1,11 @@
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\bin\Debug\n2b2.exe.config
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\bin\Debug\n2b2.exe
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\bin\Debug\n2b2.pdb
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\obj\Debug\n2b2.csprojAssemblyReference.cache
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\obj\Debug\n2b2.Form1.resources
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\obj\Debug\n2b2.Marcas.resources
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\obj\Debug\n2b2.Properties.Resources.resources
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\obj\Debug\n2b2.csproj.GenerateResource.cache
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\obj\Debug\n2b2.csproj.CoreCompileInputs.cache
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\obj\Debug\n2b2.exe
+C:\Users\fzana\OneDrive\Documentos\PROJETOS\N2B2\n2b2\obj\Debug\n2b2.pdb
