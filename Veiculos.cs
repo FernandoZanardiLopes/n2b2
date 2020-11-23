@@ -9,12 +9,24 @@ namespace n2b2
 {
     class Veiculo : Modelo
     {
-        public static string Identificacao { get; set; }
-        public static string Tipo { get; set; }
-        public static int Velocidade { get; set; }
-        public static int Capacidade { get; set; }
-        public static void Acelera() => Velocidade += 1;
-        public static void DesAcelera() => Velocidade -= 1;
+        public string Identificacao { get; set; }
+        public string Tipo { get; set; }
+        public int Velocidade { get; set; }
+        public int Capacidade { get; set; }
+        public void Acelera() => Velocidade += 1;
+        public void DesAcelera()
+        {
+            if (Velocidade <= 0)
+            { 
+                Velocidade -= 1; 
+            }
+            else
+            {
+                MessageBox.Show("O Veiculo esta parado!");
+            }
+
+        }
+        public static double CalcPedagio(int eixos) => 8.50 * eixos;
     }
      class Limpador
     {
@@ -47,8 +59,8 @@ namespace n2b2
     }
     class Camminhao : Veiculo
     {
-        public static int QtdeEixos { get; set; }
-        public double Pedagio = 8.50 * double.Parse(QtdeEixos.ToString());
+        public int QtdeEixos { get; set; }
+        public double Pedagio { get; set; }
         public double PesoCarregado { get; set; }
         public double CargaMaxima { get; set; }
         public void Carregar (double peso) => PesoCarregado += peso;
@@ -65,9 +77,8 @@ namespace n2b2
     }
     class Onibus : Veiculo
     {
-        public static int QtdeEixos { get; set; }
-        public int CapacidadePassageiros{ get; set; }
-        public double Pedagio = 8.50 * double.Parse(QtdeEixos.ToString());
+        public int QtdeEixos { get; set; }
+        public double Pedagio { get; set; }
         public bool Leito { get; set; }
     }
     class Aviao : Veiculo

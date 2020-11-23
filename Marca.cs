@@ -8,7 +8,7 @@ namespace n2b2
 {
     class Marca
     {
-        public static int Codigo { get; set; }
-        public static string Descricao { get; set; }
+        public int Codigo { get; set; }
+        public string Descricao { get; set; }
     }
 }
