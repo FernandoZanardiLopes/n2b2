@@ -9,20 +9,15 @@ namespace n2b2
 {
     static class Program
     {
-        public static string Tipo { get; set; }
-        
-
+        /// <summary>
+        /// Ponto de entrada principal para o aplicativo.
+        /// </summary>
         [STAThread]
         static void Main()
         {
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
-            
-
         }
-
     }
 }
