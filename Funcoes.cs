@@ -61,6 +61,90 @@ namespace n2b2
                 return false;
             }
         }
+        public static bool salvarCaminhao(Camminhao b)
+        {
+            try
+            {
+                File.AppendAllText("caminhao.txt", b.Identificacao + "|" + b.CodigoM.ToString() + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|" + b.QtdeEixos.ToString());
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool salvarOnibus(Onibus b)
+        {
+            try
+            {
+                File.AppendAllText("onibus.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|" + b.QtdeEixos.ToString());
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool salvarNavio(Navio b)
+        {
+            try
+            {
+                File.AppendAllText("navio.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString());
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool salvarNaviog(NavioGuerra b)
+        {
+            try
+            {
+                File.AppendAllText("navioguerra.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString());
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool salvaTrem(Trem b)
+        {
+            try
+            {
+                File.AppendAllText("trem.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString());
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool salvarAviao(Aviao b)
+        {
+            try
+            {
+                File.AppendAllText("aviao.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString());
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool salvarAviaoG(AviaoGuerra b)
+        {
+            try
+            {
+                File.AppendAllText("aviaoguerra.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString());
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public void CriarListas()
         {
 
@@ -136,6 +220,8 @@ namespace n2b2
                         j++;
                         c.Capacidade = Convert.ToInt32(tempc[j]);
                         j++;
+                        c.QtdeEixos = Convert.ToInt32(tempc[j]);
+                        j++;
                         ListaCaminhoes.Add(c);
                     }
                     break;
@@ -151,6 +237,8 @@ namespace n2b2
                         c.DescricaoM = tempo[j];
                         j++;
                         c.Capacidade = Convert.ToInt32(tempo[j]);
+                        j++;
+                        c.QtdeEixos = Convert.ToInt32(tempo[j]);
                         j++;
                         ListaOnibus.Add(c);
                     }
