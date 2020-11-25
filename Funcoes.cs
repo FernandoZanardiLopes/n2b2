@@ -9,17 +9,17 @@ namespace n2b2
 {
     class Funcoes
     {
-        public List<Carro> ListaCarros;
-        public List<Moto> ListaMotos;
-        public List<Camminhao> ListaCaminhoes;
-        public List<Onibus> ListaOnibus;
-        public List<Trem> ListaTrem;
-        public List<Aviao> ListaAviao;
-        public List<AviaoGuerra> ListaAviaoG;
-        public List<Navio> ListaNavio;
-        public List<NavioGuerra> ListaNavioG;
-        public List<Marca> ListaMarca;
-        public List<Modelo> ListaModelo;
+        public static List<Carro> ListaCarros;
+        public static List<Moto> ListaMotos;
+        public static List<Camminhao> ListaCaminhoes;
+        public static List<Onibus> ListaOnibus;
+        public static List<Trem> ListaTrem;
+        public static List<Aviao> ListaAviao;
+        public static List<AviaoGuerra> ListaAviaoG;
+        public static List<Navio> ListaNavio;
+        public static List<NavioGuerra> ListaNavioG;
+        public static List<Marca> ListaMarca;
+        public static List<Modelo> ListaModelo;
 
         public static void SalvarMarca(Marca m)
         {
@@ -145,7 +145,7 @@ namespace n2b2
                 return false;
             }
         }
-        public void CriarListas()
+        public static void CriarListas()
         {
 
             string[] veiculos= File.ReadAllText("veiculos.txt").Split('|');
@@ -158,7 +158,7 @@ namespace n2b2
             }
 
         }
-        public bool ExisteTxt(string arquivo)
+        public static bool ExisteTxt(string arquivo)
         {
             if (File.Exists($"{arquivo.Trim()}.txt"))
             {
@@ -169,7 +169,7 @@ namespace n2b2
                 return false;
             }
         }
-        public void AdcLista(string tipo)
+        public static void AdcLista(string tipo)
         {
             switch (tipo.Trim())
             {

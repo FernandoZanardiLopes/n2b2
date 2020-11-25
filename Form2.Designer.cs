@@ -42,6 +42,10 @@
             this.txt4 = new System.Windows.Forms.TextBox();
             this.txt5 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbl6 = new System.Windows.Forms.Label();
+            this.txt6 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.lblleito = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbltitulo
@@ -116,42 +120,42 @@
             // 
             // txt1
             // 
-            this.txt1.Location = new System.Drawing.Point(337, 83);
+            this.txt1.Location = new System.Drawing.Point(433, 93);
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(165, 22);
             this.txt1.TabIndex = 7;
             // 
             // txt2
             // 
-            this.txt2.Location = new System.Drawing.Point(337, 157);
+            this.txt2.Location = new System.Drawing.Point(433, 157);
             this.txt2.Name = "txt2";
             this.txt2.Size = new System.Drawing.Size(165, 22);
             this.txt2.TabIndex = 8;
             // 
             // txt3
             // 
-            this.txt3.Location = new System.Drawing.Point(337, 227);
+            this.txt3.Location = new System.Drawing.Point(433, 227);
             this.txt3.Name = "txt3";
             this.txt3.Size = new System.Drawing.Size(165, 22);
             this.txt3.TabIndex = 9;
             // 
             // txt4
             // 
-            this.txt4.Location = new System.Drawing.Point(337, 292);
+            this.txt4.Location = new System.Drawing.Point(433, 293);
             this.txt4.Name = "txt4";
             this.txt4.Size = new System.Drawing.Size(165, 22);
             this.txt4.TabIndex = 10;
             // 
             // txt5
             // 
-            this.txt5.Location = new System.Drawing.Point(337, 366);
+            this.txt5.Location = new System.Drawing.Point(433, 366);
             this.txt5.Name = "txt5";
             this.txt5.Size = new System.Drawing.Size(165, 22);
             this.txt5.TabIndex = 11;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 394);
+            this.button1.Location = new System.Drawing.Point(176, 542);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(205, 44);
             this.button1.TabIndex = 12;
@@ -159,11 +163,51 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lbl6
+            // 
+            this.lbl6.AutoSize = true;
+            this.lbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl6.Location = new System.Drawing.Point(12, 427);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(50, 31);
+            this.lbl6.TabIndex = 13;
+            this.lbl6.Text = "lb6";
+            // 
+            // txt6
+            // 
+            this.txt6.Location = new System.Drawing.Point(433, 437);
+            this.txt6.Name = "txt6";
+            this.txt6.Size = new System.Drawing.Size(165, 22);
+            this.txt6.TabIndex = 14;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(558, 502);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.TabIndex = 37;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // lblleito
+            // 
+            this.lblleito.AutoSize = true;
+            this.lblleito.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblleito.Location = new System.Drawing.Point(479, 488);
+            this.lblleito.Name = "lblleito";
+            this.lblleito.Size = new System.Drawing.Size(73, 31);
+            this.lblleito.TabIndex = 36;
+            this.lblleito.Text = "Leito";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 450);
+            this.ClientSize = new System.Drawing.Size(610, 598);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.lblleito);
+            this.Controls.Add(this.txt6);
+            this.Controls.Add(this.lbl6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt5);
             this.Controls.Add(this.txt4);
@@ -201,5 +245,9 @@
         private System.Windows.Forms.TextBox txt4;
         private System.Windows.Forms.TextBox txt5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl6;
+        private System.Windows.Forms.TextBox txt6;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label lblleito;
     }
 }

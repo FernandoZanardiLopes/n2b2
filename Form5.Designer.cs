@@ -59,9 +59,9 @@
             this.lbldescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldescricao.Location = new System.Drawing.Point(12, 203);
             this.lbldescricao.Name = "lbldescricao";
-            this.lbldescricao.Size = new System.Drawing.Size(50, 31);
+            this.lbldescricao.Size = new System.Drawing.Size(136, 31);
             this.lbldescricao.TabIndex = 13;
-            this.lbldescricao.Text = "lb2";
+            this.lbldescricao.Text = "Descrição";
             // 
             // lblCodigo
             // 
@@ -69,9 +69,9 @@
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(12, 85);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(50, 31);
+            this.lblCodigo.Size = new System.Drawing.Size(100, 31);
             this.lblCodigo.TabIndex = 12;
-            this.lblCodigo.Text = "lb1";
+            this.lblCodigo.Text = "Codigo";
             // 
             // lblmarca
             // 
@@ -79,9 +79,9 @@
             this.lblmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmarca.Location = new System.Drawing.Point(12, 321);
             this.lblmarca.Name = "lblmarca";
-            this.lblmarca.Size = new System.Drawing.Size(50, 31);
+            this.lblmarca.Size = new System.Drawing.Size(89, 31);
             this.lblmarca.TabIndex = 14;
-            this.lblmarca.Text = "lb3";
+            this.lblmarca.Text = "Marca";
             // 
             // txtmarca
             // 
@@ -96,9 +96,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 31);
+            this.label1.Size = new System.Drawing.Size(185, 31);
             this.label1.TabIndex = 20;
-            this.label1.Text = "titulo";
+            this.label1.Text = "Marca/Modelo";
             // 
             // button1
             // 

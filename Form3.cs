@@ -19,14 +19,43 @@ namespace n2b2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 tela = new Form2();
-            tela.Show();
+            if(Program.Tipo == "Modelo")
+            {
+                Form5 t = new Form5();
+                t.Show();
+            }
+            else if (Program.Tipo == "Marca")
+            {
+                Form5 t = new Form5();
+                t.Show();
+            }
+            else
+            {
+                Form2 tela = new Form2();
+                tela.Show();
+            }
+
+                
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form4 tela = new Form4();
             tela.Show();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            if (Program.Tipo == "Modelo")
+            {
+                button2.Visible = false;
+                ltbListaveiculos.Visible = false;
+            }
+            else if (Program.Tipo == "Marca")
+            {
+                button2.Visible = false;
+                ltbListaveiculos.Visible = false;
+            }
         }
     }
 }

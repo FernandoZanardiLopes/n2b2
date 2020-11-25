@@ -25,13 +25,11 @@ namespace n2b2
         {
             
         }
-        public int i = 0;
         private void button3_Click(object sender, EventArgs e)
         {
             
                 
         }
-        public int velocidade = 0;
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -40,15 +38,10 @@ namespace n2b2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (velocidade <= 0)
-                MessageBox.Show("Veiculo está parado");
-            else
-            velocidade -= 1;
+            
         }
-
         
-
-            public void AbrirMenu()
+        public void AbrirMenu()
         {
             Form3 m = new Form3();
             m.Show();
@@ -110,6 +103,13 @@ namespace n2b2
         private void button10_Click(object sender, EventArgs e)
         {
             Program.Tipo = "Marca";
+            AbrirMenu();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Program.Tipo = "Modelo";
+            AbrirMenu();
         }
     }
 }

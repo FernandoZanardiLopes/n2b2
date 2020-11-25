@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace n2b2
 {
@@ -25,17 +26,16 @@ namespace n2b2
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
+            lblveiculo.Text = Program.Tipo;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (velocidade <= 0)
+            if (Convert.ToInt32(lblvelocidade.Text) <= 0)
                 MessageBox.Show("Veiculo está parado");
             else
                 velocidade -= 1;
-
-
+            lblvelocidade.Text = velocidade.ToString();
         }
         int i = 0;
         private void button3_Click(object sender, EventArgs e)
@@ -51,6 +51,19 @@ namespace n2b2
                 MessageBox.Show("Limpador Desligado");
                 i = 0;
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (Program.Tipo == "Navio")
+                MessageBox.Show("O Navio Foi Atracado");
+
+            else if (Program.Tipo == "Navio de Guerra")
+                MessageBox.Show("O Navio Foi Atracado");
+
+            else
+                MessageBox.Show("Você não está em um Navio");
+
         }
     }
 }
