@@ -20,5 +20,96 @@ namespace n2b2
         private void button1_Click(object sender, EventArgs e)
         {
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+        public int i = 0;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+                
+        }
+        public int velocidade = 0;
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (velocidade <= 0)
+                MessageBox.Show("Veiculo está parado");
+            else
+            velocidade -= 1;
+        }
+
+        
+
+            public void AbrirMenu()
+        {
+            Form3 m = new Form3();
+            m.Show();
+        }
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Program.Tipo = "Carro";
+            AbrirMenu();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Program.Tipo = "Moto";
+            AbrirMenu();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Program.Tipo = "Caminhão";
+            AbrirMenu();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Program.Tipo = "Onibus";
+            AbrirMenu();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Program.Tipo = "Avião";
+            AbrirMenu();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Program.Tipo = "Avião de Guerra";
+            AbrirMenu();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Program.Tipo = "Navio de Guerra";
+            AbrirMenu();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Program.Tipo = "Navio";
+            AbrirMenu();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Program.Tipo = "Trem";
+            AbrirMenu();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Program.Tipo = "Marca";
+        }
     }
 }

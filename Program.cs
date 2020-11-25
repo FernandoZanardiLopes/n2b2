@@ -7,8 +7,10 @@ using System.IO;
 
 namespace n2b2
 {
+    
     static class Program
     {
+        public static string Tipo { get; set; }
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
