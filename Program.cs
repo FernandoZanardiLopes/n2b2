@@ -11,6 +11,7 @@ namespace n2b2
     static class Program
     {
         public static string Tipo { get; set; }
+        public static string NomeVeiculo { get; set; }
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>

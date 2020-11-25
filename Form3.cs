@@ -56,6 +56,42 @@ namespace n2b2
                 button2.Visible = false;
                 ltbListaveiculos.Visible = false;
             }
+            Funcoes.AdcLista(Program.Tipo);
+            switch (Program.Tipo)
+            {
+                case "Carro":
+                    ltbListaveiculos.DataSource = Funcoes.ListaCarros;
+                    break;
+                case "Moto":
+                    ltbListaveiculos.DataSource = Funcoes.ListaMotos;
+                    break;
+                case "Caminhao":
+                    ltbListaveiculos.DataSource = Funcoes.ListaCaminhoes;
+                    break;
+                case "Onibus":
+                    ltbListaveiculos.DataSource = Funcoes.ListaOnibus;
+                    break;
+                case "Navio":
+                    ltbListaveiculos.DataSource = Funcoes.ListaNavio;
+                    break;
+                case "NavioGuerra":
+                    ltbListaveiculos.DataSource = Funcoes.ListaNavioG;
+                    break;
+                case "Trem":
+                    ltbListaveiculos.DataSource = Funcoes.ListaTrem;
+                    break;
+                case "Aviao":
+                    ltbListaveiculos.DataSource = Funcoes.ListaAviao;
+                    break;
+                case "AviaoGuerra":
+                    ltbListaveiculos.DataSource = Funcoes.ListaAviaoG;
+                    break;
+            }
+        }
+
+        private void ltbListaveiculos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Program.NomeVeiculo = ltbListaveiculos.SelectedItem.ToString();
         }
     }
 }
