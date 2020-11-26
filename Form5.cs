@@ -54,7 +54,7 @@ namespace n2b2
                 Modelo mo = new Modelo();
                 mo.CodigoM = Convert.ToInt32(txtcodigo.Text.Trim());
                 mo.DescricaoM = txtdescricao.Text.Trim();
-                mo.Codigo = Convert.ToInt32(txtmarca.Text.Trim());
+                mo.Marca.Codigo = Convert.ToInt32(txtmarca.Text.Trim());
                 Funcoes.SalvarModelo(mo);
             }
             

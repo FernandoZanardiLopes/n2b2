@@ -8,6 +8,7 @@ namespace n2b2
 {
     class Pedagio
     {
+        public static Carro b = new Carro();
         public static double Pago { get; set; }
         public static void Pagar(double dinheiro) =>Pago += dinheiro;
         public static void PagarPorEixo(double dinheiro, int eixo) =>Pagar(dinheiro * eixo);

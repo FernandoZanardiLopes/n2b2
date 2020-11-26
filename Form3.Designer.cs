@@ -32,16 +32,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lbltitulo = new System.Windows.Forms.Label();
-            this.ltbListaveiculos = new System.Windows.Forms.ListBox();
+            this.txtdescricao = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(9, 41);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(12, 50);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 66);
+            this.button1.Size = new System.Drawing.Size(313, 81);
             this.button1.TabIndex = 0;
             this.button1.Text = "Cadastro";
             this.button1.UseVisualStyleBackColor = true;
@@ -50,10 +50,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(290, 41);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(387, 50);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(235, 66);
+            this.button2.Size = new System.Drawing.Size(313, 81);
             this.button2.TabIndex = 1;
             this.button2.Text = "Ações";
             this.button2.UseVisualStyleBackColor = true;
@@ -62,33 +62,29 @@
             // lbltitulo
             // 
             this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Location = new System.Drawing.Point(54, 25);
-            this.lbltitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltitulo.Location = new System.Drawing.Point(72, 31);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(0, 13);
+            this.lbltitulo.Size = new System.Drawing.Size(0, 17);
             this.lbltitulo.TabIndex = 2;
             // 
-            // ltbListaveiculos
+            // txtdescricao
             // 
-            this.ltbListaveiculos.FormattingEnabled = true;
-            this.ltbListaveiculos.Location = new System.Drawing.Point(146, 135);
-            this.ltbListaveiculos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ltbListaveiculos.Name = "ltbListaveiculos";
-            this.ltbListaveiculos.Size = new System.Drawing.Size(236, 277);
-            this.ltbListaveiculos.TabIndex = 3;
-            this.ltbListaveiculos.SelectedIndexChanged += new System.EventHandler(this.ltbListaveiculos_SelectedIndexChanged);
+            this.txtdescricao.Location = new System.Drawing.Point(408, 162);
+            this.txtdescricao.Name = "txtdescricao";
+            this.txtdescricao.Size = new System.Drawing.Size(292, 22);
+            this.txtdescricao.TabIndex = 3;
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 421);
-            this.Controls.Add(this.ltbListaveiculos);
+            this.ClientSize = new System.Drawing.Size(719, 518);
+            this.Controls.Add(this.txtdescricao);
             this.Controls.Add(this.lbltitulo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -102,6 +98,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbltitulo;
-        private System.Windows.Forms.ListBox ltbListaveiculos;
+        private System.Windows.Forms.TextBox txtdescricao;
     }
 }

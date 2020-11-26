@@ -9,7 +9,7 @@ namespace n2b2
 {
     class Funcoes
     {
-        public static List<Carro> ListaCarros;
+        public static List<Carro> ListaCarros = new List<Carro>();
         public static List<Moto> ListaMotos;
         public static List<Camminhao> ListaCaminhoes;
         public static List<Onibus> ListaOnibus;
@@ -41,7 +41,7 @@ namespace n2b2
         {
             try
             {
-                File.AppendAllText("carros.txt", carro.Identificacao + "|" + carro.QtdePortas.ToString() + "|" + carro.CodigoM + "|" + carro.DescricaoM + "|" + carro.Capacidade.ToString());
+                File.AppendAllText("carro.txt", carro.Identificacao + "|" + carro.QtdePortas.ToString() + "|" + carro.CodigoM + "|" + carro.DescricaoM + "|" + carro.Capacidade.ToString() + "|");
                 return true;
             }
             catch
@@ -53,7 +53,7 @@ namespace n2b2
         {
             try
             {
-                File.AppendAllText("moto.txt", moto.Identificacao + "|" + moto.CodigoM + "|" + moto.DescricaoM + "|" + moto.Capacidade.ToString());
+                File.AppendAllText("moto.txt", moto.Identificacao + "|" + moto.CodigoM + "|" + moto.DescricaoM + "|" + moto.Capacidade.ToString() + "|");
                 return true;
             }
             catch
@@ -65,7 +65,7 @@ namespace n2b2
         {
             try
             {
-                File.AppendAllText("caminhao.txt", b.Identificacao + "|" + b.CodigoM.ToString() + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|" + b.QtdeEixos.ToString());
+                File.AppendAllText("caminhao.txt", b.Identificacao + "|" + b.CodigoM.ToString() + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|" + b.QtdeEixos.ToString() + "|");
                 return true;
             }
             catch
@@ -77,7 +77,7 @@ namespace n2b2
         {
             try
             {
-                File.AppendAllText("onibus.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|" + b.QtdeEixos.ToString());
+                File.AppendAllText("onibus.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|" + b.QtdeEixos.ToString() + "|");
                 return true;
             }
             catch
@@ -89,7 +89,7 @@ namespace n2b2
         {
             try
             {
-                File.AppendAllText("navio.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString());
+                File.AppendAllText("navio.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|");
                 return true;
             }
             catch
@@ -101,7 +101,7 @@ namespace n2b2
         {
             try
             {
-                File.AppendAllText("navioguerra.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString());
+                File.AppendAllText("navioguerra.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|");
                 return true;
             }
             catch
@@ -113,7 +113,7 @@ namespace n2b2
         {
             try
             {
-                File.AppendAllText("trem.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() );
+                File.AppendAllText("trem.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|");
                 return true;
             }
             catch
@@ -125,7 +125,7 @@ namespace n2b2
         {
             try
             {
-                File.AppendAllText("aviao.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString());
+                File.AppendAllText("aviao.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|");
                 return true;
             }
             catch
@@ -137,7 +137,7 @@ namespace n2b2
         {
             try
             {
-                File.AppendAllText("aviaoguerra.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString());
+                File.AppendAllText("aviaoguerra.txt", b.Identificacao + "|" + b.CodigoM + "|" + b.DescricaoM + "|" + b.Capacidade.ToString() + "|");
                 return true;
             }
             catch
@@ -172,6 +172,9 @@ namespace n2b2
         public static void ListarCarro()
         {
             string[] temp = File.ReadAllText("carro.txt").Split('|');
+            Marca mindinho = new Marca();
+            mindinho.Codigo = 1;
+            mindinho.Descricao = "";
             for (int j = 0; j < temp.Length;)
             {
                 Carro c = new Carro();
@@ -185,7 +188,11 @@ namespace n2b2
                 j++;
                 c.Capacidade = Convert.ToInt32(temp[j]);
                 j++;
+                c.Velocidade = 0;
+                c.Marca = mindinho;
                 ListaCarros.Add(c);
+                if (j == temp.Length - 1)
+                    break;
             }
         }
         public static void ListarMoto()
